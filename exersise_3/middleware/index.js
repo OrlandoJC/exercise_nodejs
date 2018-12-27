@@ -1,6 +1,6 @@
 function validate(req, resp, next){
     var auth = req.headers['authorization']
-    console.log( auth)
+
     if(auth === "true") {
         next()
     } else {

@@ -1,16 +1,16 @@
-var express = require('express')
-var app = express()
+let express     = require('express'),
+    app         = express(),
+    bodyParser  = require('body-parser')
 
-app.get('/getUser', (req, resp)=>{
-    var info = req.getBody()
-    resp.send(info)
+app.use(bodyParser.urlencoded({ extended: false })) 
+app.use(bodyParser.json())
+
+app.get('/user', (req, resp) => { resp.send("Endpoint get User") })
+
+app.post('/user', (req, resp)=>{
+    resp.status(200).json({
+       info : req.body
+    })
 })
 
-app.post('/saveUser', (req, resp)=>{
-    resp.send('Hola mundo')
-})
-
-
-app.listen('', function (){
-    console.log("Servidor ejecutando en el puerto 3500")
-})
+app.listen('3000', () => { console.log("Servidor ejecutando en el puerto 3000") })

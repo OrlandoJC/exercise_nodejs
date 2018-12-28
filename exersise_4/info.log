@@ -1,0 +1,6 @@
+{"level":"info","message":"Hello distributed log files!"}
+{"message":"Hello again distributed logs","level":"info"}
+{"level":"debug","message":"Now my debug messages are written to console!"}
+{"level":"info","message":"Hello distributed log files!"}
+{"message":"Hello again distributed logs","level":"info"}
+{"level":"debug","message":"Now my debug messages are written to console!"}

@@ -1,6 +1,6 @@
 var winston = require("winston");
 winston.configure({
-  transports: [new winston.transports.File({ filename: "somefile.log" })]
+  transports: [new winston.transports.File({ filename: "info.log" })]
 })
 
 winston.log("info", "Hello distributed log files!")

@@ -5,7 +5,7 @@ let express     = require('express'),
 app.use(bodyParser.urlencoded({ extended: false })) 
 app.use(bodyParser.json())
 
-app.get('/user', (req, resp) => { resp.send("Endpoint get User") })
+app.get('/user', (req, resp) => { resp.status(200).send({msg : "Endpoint get User"}) })
 
 app.post('/user', (req, resp)=>{
     resp.status(200).json({
